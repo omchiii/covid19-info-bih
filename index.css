@@ -1,0 +1,17 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ 
+  text-align: center;
+  color: #fff;
+}
+nav {
+
+  border-bottom: 0.1px solid white;
+  margin-bottom: 50px;
+}
+a {
+  color: white;
+}
