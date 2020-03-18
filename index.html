@@ -21,6 +21,14 @@
 
             var options = {
                 title: '',
+                chartArea: {
+                    // leave room for y-axis labels
+                    width: '78%'
+                },
+                legend: {
+                    position: 'top'
+                },
+                width: '100%',
                 curveType: 'function',
                 legend: 'none',
                 backgroundColor: 'transparent',
@@ -144,7 +152,7 @@
         <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } }) }();
         </script>
 
-        <div id="curve_chart" style=" background-color: transparent; width: auto; height: 500px">
+        <div id="curve_chart" style=" background-color: transparent;  height: 500px">
         </div>
         <br>
         <br>
