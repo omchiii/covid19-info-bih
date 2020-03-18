@@ -4,6 +4,61 @@
     <title>Covid-19 - BiH</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Date', 'Broj slucajeva'],
+                ['15.03', 24],
+                ['16.03', 25],
+                ['17.03', 34],
+                ['18.03', 39],
+
+            ]);
+
+            var options = {
+                title: '',
+                curveType: 'function',
+                legend: 'none',
+                backgroundColor: 'transparent',
+                hAxis: {
+                    textStyle: { color: '#FFF' }
+                },
+                vAxis: {
+                    textStyle: { color: '#FFF' }
+                },
+                lineWidth: 5,
+                pointSize: 30,
+                vAxes: {
+
+                    0: {
+                        title: 'Broj slucajeva',
+                        titleTextStyle: {
+                            color: '#fff'
+                        }
+                    },
+
+                },
+                series: {
+                    0: {
+                        color: '#4e8fa9',
+                        pointShape: 'triangle'
+                    },
+                }
+
+
+
+
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,6 +80,10 @@
         }
 
         a {
+            color: white;
+        }
+
+        #omer {
             color: white;
         }
     </style>
@@ -62,7 +121,7 @@
                 <div class="col">
                     Broj žaraženih: <br />
 
-                    <b>36</b>
+                    <b>39</b>
                 </div>
                 <div class="col">
                     Oporavljeni slučajevi: <br />
@@ -80,20 +139,13 @@
         <br>
 
         <iframe title="" aria-label="Bosnia and Herzegovina municipalities Symbol map" id="datawrapper-chart-5UL2D"
-            src="//datawrapper.dwcdn.net/5UL2D/6/" scrolling="no" frameborder="0"
+            src="//datawrapper.dwcdn.net/5UL2D/7/" scrolling="no" frameborder="0"
             style="width: 0; min-width: 100% !important; border: none;" height="550"></iframe>
         <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } }) }();
         </script>
-        <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } }) }();
-        </script>
-        <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } }) }();
-        </script>
-        <h5>Slučajeva tijekom vremena</h5>
-        <iframe title="" aria-label="Line Chart" id="datawrapper-chart-yyw3r" src="//datawrapper.dwcdn.net/yyw3r/4/"
-            scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;"
-            height="400"></iframe>
-        <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } }) }();
-        </script>
+
+        <div id="curve_chart" style=" background-color: transparent; width: auto; height: 500px">
+        </div>
         <br>
         <br>
         <div class="container">
@@ -104,16 +156,16 @@
                     <div class="col">
                         Broj žaraženih: <br />
 
-                        <b>200,099</b>
+                        <b>217,432</b>
                     </div>
                     <div class="col">
                         Oporavljeni: <br />
 
-                        <b>82,813</b>
+                        <b>84,383</b>
                     </div>
                     <div class="col">
                         Smrtni slučajevi: <br />
-                        <b>8,010</b> (4.00%)
+                        <b>8,919</b> (4.10%)
                     </div>
                 </div>
             </div>
@@ -122,6 +174,7 @@
 
             <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } }) }();
             </script>
+
 </body>
 
 </html>
